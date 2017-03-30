@@ -155,8 +155,7 @@ void FastPWM::pwmInit() {
 
 void FastPWM::updateState() {
 	//check to see if the new value is high, low, or acceptable
-
-	//is the value below the mapped safety?
+	
 	if (this->val < this->mapValue(this->lowWarning)) {
 		this->state = 1;
 		this->initialized = false;
@@ -205,32 +204,3 @@ void FastPWM::updateOutputCompareRegisterZero() {
 
 	}
 }
-
-
-//Finally, the loop function and the setup function. Simply here to silence warnings
-//void setup() {
-//
-//	/* Implementation to silence warnings */
-//
-//}
-//
-//void loop() {
-//
-//	/* Implementation to silence warnings */
-//
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
